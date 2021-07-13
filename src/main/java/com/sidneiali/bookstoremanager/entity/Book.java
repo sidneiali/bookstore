@@ -1,8 +1,13 @@
 package com.sidneiali.bookstoremanager.entity;
 
+import lombok.*;
 import javax.persistence.*;
 
 @Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
 
     @Id
