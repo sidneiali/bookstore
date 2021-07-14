@@ -2,6 +2,7 @@ package com.sidneiali.bookstoremanager.service;
 
 import com.sidneiali.bookstoremanager.dto.BookDTO;
 import com.sidneiali.bookstoremanager.entity.Book;
+import com.sidneiali.bookstoremanager.exception.BookNotFoundException;
 import com.sidneiali.bookstoremanager.repository.BookRepository;
 import com.sidneiali.bookstoremanager.utils.BookUtils;
 import org.junit.jupiter.api.Assertions;
@@ -28,7 +29,7 @@ public class BookServiceTest {
     private BookService bookService;
 
     @Test
-    void whenGivenExistingIdThenReturnThisBook() {
+    void whenGivenExistingIdThenReturnThisBook() throws BookNotFoundException {
         Book expectedFoundBook = createFakeBook();
 
         when(bookRepository.findById(expectedFoundBook.getId())).thenReturn(Optional.of(expectedFoundBook));
