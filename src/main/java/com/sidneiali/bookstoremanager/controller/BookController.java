@@ -1,10 +1,12 @@
 package com.sidneiali.bookstoremanager.controller;
 
+import com.sidneiali.bookstoremanager.dto.BookDTO;
 import com.sidneiali.bookstoremanager.dto.MessageResponseDTO;
-import com.sidneiali.bookstoremanager.entity.Book;
 import com.sidneiali.bookstoremanager.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/books")
@@ -18,7 +20,7 @@ public class BookController {
     }
 
     @PostMapping
-    public MessageResponseDTO create(@RequestBody Book book){
-        return bookService.create(book);
+    public MessageResponseDTO create(@RequestBody @Valid BookDTO bookDTO){
+        return bookService.create(bookDTO);
     }
 }
