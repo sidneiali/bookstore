@@ -23,4 +23,9 @@ public class BookController {
     public MessageResponseDTO create(@RequestBody @Valid BookDTO bookDTO){
         return bookService.create(bookDTO);
     }
+
+    @GetMapping("/{id}")
+    public BookDTO findById(@PathVariable Long id) {
+        return bookService.finById(id);
+    }
 }
