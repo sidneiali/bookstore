@@ -1,6 +1,5 @@
-package controller;
+package com.sidneiali.bookstoremanager.controller;
 
-import com.sidneiali.bookstoremanager.controller.BookController;
 import com.sidneiali.bookstoremanager.dto.BookDTO;
 import com.sidneiali.bookstoremanager.dto.MessageResponseDTO;
 import com.sidneiali.bookstoremanager.service.BookService;
@@ -10,22 +9,17 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MockMvcResultMatchersDsl;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
-import utils.BookUtils;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static utils.BookUtils.*;
+import static com.sidneiali.bookstoremanager.utils.BookUtils.*;
 
 @ExtendWith(MockitoExtension.class)
 public class BookControllerTest {

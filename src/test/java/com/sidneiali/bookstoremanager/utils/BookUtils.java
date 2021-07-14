@@ -1,4 +1,4 @@
-package utils;
+package com.sidneiali.bookstoremanager.utils;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

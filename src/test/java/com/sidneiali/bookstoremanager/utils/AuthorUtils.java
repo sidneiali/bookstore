@@ -1,4 +1,4 @@
-package utils;
+package com.sidneiali.bookstoremanager.utils;
 
 import com.github.javafaker.Faker;
 import com.sidneiali.bookstoremanager.dto.AuthorDTO;
